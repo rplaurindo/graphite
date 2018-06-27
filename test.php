@@ -4,7 +4,6 @@ require_once('./load-paths.php');
 require_once('./autoload.php');
 
 use GraphIte\BFSArray;
-//use GraphIte\Directory;
 
 $arr = array(
     'a' => array(

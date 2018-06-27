@@ -5,8 +5,10 @@ require_once('./autoload.php');
 
 use GraphIte\Directory;
 
-$directory = new Directory($srcPath);
+$paths = explode(PATH_SEPARATOR, get_include_path());
 
-foreach ($directory as $path) {
+$paths = new Directory($paths);
+
+foreach ($paths as $path) {
     echo $path . "\n";
 }

@@ -1,7 +1,7 @@
 {
-  "name": "abstract-graph-iterator",
+  "name": "GraphIte",
   "version": "1.0.0",
-  "homepage": "https://github.com/rplaurindo/sm2p",
+  "homepage": "https://github.com/rplaurindo/graphite",
   "description": "",
   "type": "library",
   "license": "MIT",

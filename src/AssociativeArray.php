@@ -2,7 +2,7 @@
 
 namespace GraphIte;
 
-class BFSArray extends AbstractGraphIterator {
+class AssociativeArray extends AbstractGraphIterator {
 
     function __construct(array $collection) {
         parent::__construct($collection);

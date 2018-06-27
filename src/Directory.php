@@ -4,12 +4,11 @@ namespace GraphIte;
 
 class Directory extends AbstractGraphIterator {
 
-    function __construct($path) {
-        parent::__construct($this->getChildNodes($path));
+    function __construct(array $collection) {
+        parent::__construct($collection);
     }
 
     function isLeafNode($current) {
-
         if (count($this->getChildNodes($current))) {
             return false;
         }

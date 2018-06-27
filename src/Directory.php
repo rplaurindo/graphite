@@ -2,7 +2,7 @@
 
 namespace GraphIte;
 
-class Directory extends AbstractGraphIterator {
+class Directory extends AbstractSequentialGraphIterator {
 
     function __construct(array $collection) {
         parent::__construct($collection);

@@ -7,8 +7,8 @@ use ArrayObject;
 
 abstract class AbstractGraphIterator implements Iterator {
 
+    protected $nextQueue;
     private $queue;
-    private $nextQueue;
     private $i;
     private $lastIndex;
     private $keys;
@@ -73,17 +73,10 @@ abstract class AbstractGraphIterator implements Iterator {
         $this->i = $this->lastIndex + 1;
     }
 
-    private function putOnNextQueue($collection) {
-        // when the key name imports
-        if ($this->is_associative_array($collection)) {
-            $keys = array_keys($collection);
-            foreach ($keys as $key) {
-                $this->nextQueue[$key] = $collection[$key];
-            }
-        } else {
-            foreach ($collection as $value) {
-                array_push($this->nextQueue, $value);
-            }
+    protected function putOnNextQueue($collection) {
+        $keys = array_keys($collection);
+        foreach ($keys as $key) {
+            $this->nextQueue[$key] = $collection[$key];
         }
     }
 
@@ -103,10 +96,6 @@ abstract class AbstractGraphIterator implements Iterator {
         $this->queue = array();
 
         return false;
-    }
-
-    private function is_associative_array(array $array) {
-        return substr(json_encode($array), 0, 1) == '{';
     }
 
 }

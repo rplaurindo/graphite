@@ -3,7 +3,7 @@
 require_once('./load-paths.php');
 require_once('./autoload.php');
 
-use GraphIte\BFSArray;
+use GraphIte\AssociativeArray;
 
 $arr = array(
     'a' => array(
@@ -27,12 +27,13 @@ $arr = array(
 
 //$arr = [1, 2, 3, [4, 5, 6, [7, 8, 9]]];
 
-$bfsArray = new BFSArray($arr);
+$associativeIterator = new AssociativeArray($arr);
 
-//$bfsArray->stopAtNext();
-foreach ($bfsArray as $key => $value) {
+//$associativeIterator->stopAtNext();
+foreach ($associativeIterator as $key => $value) {
     echo 'key: ' . $key . "\n";
     echo 'value: ' . json_encode($value) . "\n";
 //    $bfsArray->stopAtNext();
 //    break;
 }
+

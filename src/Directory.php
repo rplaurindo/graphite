@@ -2,6 +2,8 @@
 
 namespace GraphIte;
 
+require_once('AbstractSequentialGraphIterator.php');
+
 class Directory extends AbstractSequentialGraphIterator {
 
     function __construct(array $collection) {

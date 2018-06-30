@@ -20,8 +20,8 @@ class Loader {
 
     function load() {
         foreach ($this->directoryIterator as $path) {
-            $absolutePath = $path . DIRECTORY_SEPARATOR . $this->namespacedPath;
 
+            $absolutePath = $path . DIRECTORY_SEPARATOR . $this->namespacedPath;
             if (file_exists($absolutePath)) {
                 include $this->namespacedPath;
                 break;

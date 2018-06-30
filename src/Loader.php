@@ -30,7 +30,7 @@ class Loader {
                 $absolutePath = $path . DIRECTORY_SEPARATOR . $fileName;
 
                 if (file_exists($absolutePath)) {
-                    include $fileName;
+                    include $absolutePath;
                     break;
                 }
             }

@@ -17,7 +17,6 @@ class Loader {
         $directoryIterator = new Directory($paths);
 
         foreach ($directoryIterator as $path) {
-
             $namespacedPath =  str_replace('\\', DIRECTORY_SEPARATOR, $this->className)  . '.php';
             $absolutePath = $path . DIRECTORY_SEPARATOR . $namespacedPath;
             if (file_exists($absolutePath)) {

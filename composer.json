@@ -2,7 +2,7 @@
   "name": "rplaurindo/graphite",
   "version": "1.0.0",
   "homepage": "https://github.com/rplaurindo/graphite",
-  "description": "",
+  "description": "A recursive iterator interface for graphs.",
   "type": "library",
   "license": "MIT",
   "authors": [
@@ -11,6 +11,9 @@
       "email": "rafaelplaurindo@gmail.com"
     }
   ],
+  "require": {
+    "php": "~5.6"
+  },
   "autoload": {
     "psr-4": {
       "GraphIte\\": [

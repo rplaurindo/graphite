@@ -1,7 +1,7 @@
 <?php
 
-require_once('./load-paths.php');
-require_once('./autoload.php');
+//require_once('./load-paths.php');
+//require_once('./autoloader.php');
 
 use GraphIte\Directory;
 

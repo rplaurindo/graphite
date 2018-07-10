@@ -15,11 +15,9 @@
     "php": "~5.6"
   },
   "autoload": {
-    "psr-4": {
-      "GraphIte\\": [
-        "src/",
-        "lib/"
-      ]
-    }
+    "classmap": [
+      "lib/",
+      "src/"
+    ]
   }
 }

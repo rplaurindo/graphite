@@ -4,7 +4,7 @@ require_once('Directory.php');
 
 use GraphIte\Directory;
 
-class Loader {
+class PathLoader {
 
     private $className;
 

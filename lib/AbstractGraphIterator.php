@@ -5,6 +5,7 @@ namespace GraphIte;
 use Iterator;
 use ArrayObject;
 
+// Concrete Iterator
 abstract class AbstractGraphIterator implements Iterator {
 
     protected $nextQueue;
@@ -14,9 +15,9 @@ abstract class AbstractGraphIterator implements Iterator {
     private $keys;
     private $ordered2Stop;
 
-    function __construct(array $collection) {
+    function __construct(AbstractIteratorAggregate $collection) {
         $this->ordered2Stop = false;
-        $this->queue = $collection;
+        $this->queue = $collection->getRealCollectionCopy();
         $this->nextQueue = array();
     }
 

@@ -2,9 +2,10 @@
 
 namespace GraphIte;
 
+// Concrete Iterator Generalization
 class AssociativeArray extends AbstractGraphIterator {
 
-    function __construct(array $collection) {
+    function __construct(AbstractIteratorAggregate $collection) {
         parent::__construct($collection);
     }
 

@@ -2,6 +2,8 @@
 
 namespace GraphIte;
 
+use AbstractIteratorAggregate;
+
 class DirectoryAggregate extends AbstractIteratorAggregate {
 
     function __construct(array $collection) {

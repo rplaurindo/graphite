@@ -1,10 +1,5 @@
 <?php
 
-namespace GraphIte;
-
-use Iterator;
-use ArrayObject;
-
 // Concrete Iterator
 abstract class AbstractGraphIterator implements Iterator {
 

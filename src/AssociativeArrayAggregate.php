@@ -2,6 +2,8 @@
 
 namespace GraphIte;
 
+use AbstractIteratorAggregate;
+
 class AssociativeArrayAggregate extends AbstractIteratorAggregate {
 
     function __construct(array $collection) {

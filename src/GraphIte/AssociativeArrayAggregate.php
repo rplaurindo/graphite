@@ -2,16 +2,14 @@
 
 namespace GraphIte;
 
-use AbstractIteratorAggregate;
-
-class DirectoryAggregate extends AbstractIteratorAggregate {
+class AssociativeArrayAggregate extends AbstractIteratorAggregate {
 
     function __construct(array $collection) {
         parent::__construct($collection);
     }
 
     function createIterator() {
-        return new Directory($this);
+        return new AssociativeArray($this);
     }
 
 }

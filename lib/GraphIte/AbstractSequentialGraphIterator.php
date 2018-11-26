@@ -1,5 +1,7 @@
 <?php
 
+namespace GraphIte;
+
 abstract class AbstractSequentialGraphIterator extends AbstractGraphIterator {
 
     protected function putOnNextQueue($collection) {

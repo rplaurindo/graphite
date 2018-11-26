@@ -1,5 +1,7 @@
 <?php
 
+namespace GraphIte;
+
 abstract class AbstractIteratorAggregate {
 
     private $collection;

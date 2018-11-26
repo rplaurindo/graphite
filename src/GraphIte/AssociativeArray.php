@@ -2,9 +2,6 @@
 
 namespace GraphIte;
 
-use AbstractGraphIterator;
-use AbstractIteratorAggregate;
-
 // Concrete Iterator Generalization
 class AssociativeArray extends AbstractGraphIterator {
 

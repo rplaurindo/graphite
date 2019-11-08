@@ -28,24 +28,10 @@ abstract class AbstractGraphIterator implements Iterator {
         $this->nextQueue = array();
     }
 
+//     has no child
     abstract function isLeafNode($current);
+    
     abstract function getChildNodes($current);
-
-    function key() {
-        return $this->keys[$this->i];
-    }
-
-    function rewind() {
-        $this->keys = array_keys($this->queue);
-        if (!$this->ordered2Stop) {
-            $this->i = 0;
-            $this->lastIndex = count($this->keys) - 1;
-        }
-    }
-
-    function valid() {
-        return $this->i <= $this->lastIndex;
-    }
 
     function current() {
 
@@ -61,6 +47,10 @@ abstract class AbstractGraphIterator implements Iterator {
 
         return $current;
     }
+    
+    function key() {
+        return $this->keys[$this->i];
+    }
 
     function next() {
         $this->i++;
@@ -74,6 +64,18 @@ abstract class AbstractGraphIterator implements Iterator {
             $item = $this->queue[$key];
             return $item;
         }
+    }
+    
+    function rewind() {
+        $this->keys = array_keys($this->queue);
+        if (!$this->ordered2Stop) {
+            $this->i = 0;
+            $this->lastIndex = count($this->keys) - 1;
+        }
+    }
+    
+    function valid() {
+        return $this->i <= $this->lastIndex;
     }
 
     function stopAtNext() {

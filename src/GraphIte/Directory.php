@@ -2,6 +2,7 @@
 
 namespace GraphIte;
 
+// Concrete Iterator Generalization
 class Directory extends AbstractSequentialGraphIterator {
 
     function isLeafNode($current) {

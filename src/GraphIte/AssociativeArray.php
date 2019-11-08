@@ -5,10 +5,6 @@ namespace GraphIte;
 // Concrete Iterator Generalization
 class AssociativeArray extends AbstractGraphIterator {
 
-    function __construct(AbstractIteratorAggregate $collection) {
-        parent::__construct($collection);
-    }
-
     function isLeafNode($current) {
         if (is_array($current)) {
             return false;

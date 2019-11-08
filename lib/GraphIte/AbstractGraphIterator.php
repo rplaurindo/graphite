@@ -2,7 +2,10 @@
 
 namespace GraphIte;
 
-use Iterator, ArrayObject;
+use
+    Iterator
+    , ArrayObject
+;
 
 // Concrete Iterator
 abstract class AbstractGraphIterator implements Iterator {

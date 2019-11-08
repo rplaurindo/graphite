@@ -7,8 +7,6 @@ $paths = ['C:'];
 
 $abstractIteratorAggregate = new GraphIte\DirectoryAggregate($paths);
 
-$directoryIterator = new GraphIte\Directory($abstractIteratorAggregate);
-
-foreach ($directoryIterator as $path) {
+foreach ($abstractIteratorAggregate->createIterator() as $path) {
     echo $path . "\n";
 }

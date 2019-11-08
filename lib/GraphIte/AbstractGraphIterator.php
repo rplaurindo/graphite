@@ -11,10 +11,15 @@ use
 abstract class AbstractGraphIterator implements Iterator {
 
     protected $nextQueue;
+    
     private $queue;
+    
     private $i;
+    
     private $lastIndex;
+    
     private $keys;
+    
     private $ordered2Stop;
 
     function __construct(AbstractIteratorAggregate $collection) {

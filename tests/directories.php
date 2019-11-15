@@ -2,7 +2,9 @@
 
 require 'autoload.php';
 
-$directoryIdentity = 'D:\Usuários\rafael.laurindo\projects\php\graphite\tests\ESPM';
+$directoryIdentity = __DIR__ . DIRECTORY_SEPARATOR . 'root_folder_2_test';
+
+//echo $directoryIdentity;
 
 $directoryIdentityFolderNames = explode('\\', $directoryIdentity);
 
@@ -22,11 +24,12 @@ foreach ($abstractIteratorAggregate->createIterator() as $directory) {
     
     $relativePath = '/' . implode(array_slice($pathFolders, $parentFolderNameIndex), '/');
     
-    echo "relative path: $relativePath\n\n";
+    echo "relative path: $relativePath\n";
     $fileNames = GraphIte\Directory::getFileNames($directory);
     if (count($fileNames)) {
+    	echo "\nfiles...: ";
         print_r(GraphIte\Directory::getFileNames($directory));
         
     }
     echo "\n------------\n\n";
-}
+}/**/

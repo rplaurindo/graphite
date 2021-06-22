@@ -1,7 +1,7 @@
 {
-  "name": "rplaurindo/graphite",
+  "name": "rplaurindo/graphite-php",
   "version": "1.0.0",
-  "homepage": "https://github.com/rplaurindo/graphite",
+  "homepage": "https://github.com/home-labs/graphite-php",
   "description": "A PHP recursive iterator interface for graphs.",
   "type": "library",
   "license": "MIT",
